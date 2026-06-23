@@ -1,12 +1,10 @@
 import { Toaster } from 'sonner'
 import type { Metadata } from 'next'
-import { VercelToolbar } from '@vercel/toolbar/next'
-import { ExamplesBanner } from '@/components/banners/examples-banner'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Flags SDK Example',
-  description: 'A Flags SDK ecommerce example',
+  title: 'SellFast Marketplace',
+  description: 'A local marketplace with paid listing boosts and an admin backend panel.',
 }
 
 export default function RootLayout({
@@ -17,10 +15,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="antialiased">
-        <ExamplesBanner />
         {children}
-        <Toaster />
-        <VercelToolbar />
+        <Toaster richColors position="top-right" />
       </body>
     </html>
   )
