@@ -92,7 +92,7 @@ export function decodeFlagValues<TFlagPaths extends keyof FlagValues & string>(
   encodedValues: string,
   flagPaths: TFlagPaths[]
 ): Pick<FlagValues, TFlagPaths> {
-  return sdk.decodeFlagValues({ flagPaths, encodedValues })
+  return sdk.decodeFlagValues({ flagPaths, encodedFlagValues: encodedValues })
 }
 
 export type VariableValues = {}
